@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Container, Form, FormControl } from 'react-bootstrap';
+import Events from '../Events/Events';
 import './Home.css';
 
 
@@ -20,6 +21,7 @@ const Home = () => {
                 </Form>
                 </Container>
             </div>
+            <Events></Events>
         </div>
     );
 };

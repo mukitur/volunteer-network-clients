@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
+import AddEvents from './Pages/AddEvents/AddEvents';
 import Blogs from './Pages/Blogs/Blogs';
 import Donation from './Pages/Donation/Donation';
 import Events from './Pages/Events/Events';
@@ -23,11 +24,15 @@ function App() {
           <Route path="/events">
               <Events></Events>
           </Route>
+          
           <Route path ="/donation">
               <Donation></Donation>
           </Route>
           <Route path="/blogs">
               <Blogs></Blogs>
+          </Route>
+          <Route path="/addevents">
+            <AddEvents></AddEvents>
           </Route>
           <Route path="*">
               <NotFound></NotFound>
