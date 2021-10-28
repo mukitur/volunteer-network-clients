@@ -1,11 +1,22 @@
 import React from 'react';
+import axios from 'axios';
 import { useForm } from "react-hook-form";
 import './AddEvents.css';
 
 
 const AddEvents = () => {
-    const { register, handleSubmit } = useForm();
-  const onSubmit = data => console.log(data);
+    const { register, handleSubmit,reset } = useForm();
+  const onSubmit = data => {
+   // console.log(data)
+    axios.post('http://localhost:5000/events', data)
+    .then(res=>{
+        if(res.data.insertedId){
+            alert('Events Successfully added')
+        }
+        reset();
+    })
+
+  };
 
     return (
         <div className="add-event">
